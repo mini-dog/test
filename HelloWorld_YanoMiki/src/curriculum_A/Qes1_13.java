@@ -26,7 +26,7 @@ public class Qes1_13 {
 	f = 0.0f;
 	d = 0.0;
 	ch = '\u0000';
-	str = "null";
+	str = null;
 	bo = false;
 	
 // 改行
