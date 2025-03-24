@@ -9,8 +9,6 @@ public class Qes6 {
 		// TODO 自動生成されたメソッド・スタブ
 		
 		// 問題６：入力した商品の残り台数が出力されるシステムを作成
-		// 商品名リスト
-		String[] items = {"パソコン", "冷蔵庫", "扇風機", "洗濯機", "加湿器", "テレビ", "ディスプレイ"};
 		// ユーザーから入力を受け取る
 		Scanner scanner = new Scanner(System.in);
 		String input =scanner.nextLine();
