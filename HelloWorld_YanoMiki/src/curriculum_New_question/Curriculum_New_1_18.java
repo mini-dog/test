@@ -21,7 +21,7 @@ public class Curriculum_New_1_18 {
 		}
 	}
 		// Q4：Q2をオーバーロードして引数を小数2つに変更し、引数同士を和算しコンソールに出力してください。
-	public static void addAndPrint(double num1, double num2) {
+	public static void multiplyAndPrint(double num1, double num2) {
 		double result = num1 + num2;
 		System.out.println(result);
 	}
@@ -45,28 +45,20 @@ public class Curriculum_New_1_18 {
 
 		// Q6：引数にQ5で作成したメソッドの返り値を受け取り、受け取った配列の要素の平均値をコンソールに出力するメソッドを作成してください。
 		// ※小数点以下も表示されるようにしてください。
-	public static void calculateAverage(int[] numbers) {
+	public static double calculateAverage(int[] numbers) {
 		if (numbers == null || numbers.length == 0) {
-			System.out.println();
-			return;
+			return 0;
 		}
 		double sum = 0;
 		for (int number : numbers) {
 			sum += number;
 		}
-		double average = sum / numbers.length;
-		
-		System.out.printf("%.2f\n", average);
+		return sum / numbers.length;
 	}
 	
 		// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
-	public static boolean value(int[] numbers) {
-        for (int num : numbers) {
-            if (num >= 50) {
-            	return true;
-            }
-        }
-        return false;
+	public static boolean value(double average) {
+        return average >= 50;
 	}
 
 	    // 作成したメソッドをここで呼び出してください
@@ -79,13 +71,14 @@ public class Curriculum_New_1_18 {
 		int[] numbers = {1, 2, 3, 4, 5};
 		printArray(numbers);
 		// Q4
-		addAndPrint(3.5, 4.2);
+		multiplyAndPrint(3.5, 4.2);
 		// Q5
 		int[] randomNumbers = randomNumbers(10);
 		// Q6
-		calculateAverage(randomNumbers);
+		double average = calculateAverage(randomNumbers);
+		System.out.printf("%.2f\n", average);
 		// Q7
-		boolean isGreaterThanFifty = value(randomNumbers);
+		boolean isGreaterThanFifty = value(average);
         System.out.println(isGreaterThanFifty);
 	}
 
