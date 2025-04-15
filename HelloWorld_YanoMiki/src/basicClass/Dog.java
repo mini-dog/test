@@ -1,7 +1,7 @@
 package basicClass;
 
 public class Dog {
-
+	
 		// Q1:フィールドに動物の名前の変数を定義
 		private String dogName;
 		
@@ -13,8 +13,6 @@ public class Dog {
 		public Dog() {
 			// Q3
 			this.dogName = "犬";
-			// Q4
-			this.numDogs = 5;
 		}
 		// Q4
 		public Dog(int numDogs) {
@@ -28,15 +26,12 @@ public class Dog {
 		public int getNumDogs() {
 			return numDogs;
 		}
+		
 		public static void main(String[] args) {
-			// Q3
-			Dog myDog1 = new Dog();
-			System.out.println(myDog1.getDogName());
-			// Q4
-			Dog myDog2 = new Dog(10);
-			System.out.println(myDog2.getNumDogs());
-		}
+	
+	}
 }
+	
 
 
 
